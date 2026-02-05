@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pastel Pomodoro Timer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="pomodoro">
+      <div class="card">
+        <p class="eyebrow">Pastel Focus</p>
+        <h1>Pomodoro Timer</h1>
+        <p class="subtitle">A gentle 25-minute focus session with soft pink vibes.</p>
+
+        <div class="timer" role="timer" aria-live="polite">
+          <span id="timer-label">Focus</span>
+          <span id="time-remaining" class="time">25:00</span>
+        </div>
+
+        <div class="controls">
+          <button id="start-pause" class="primary">Start</button>
+          <button id="reset" class="ghost">Reset</button>
+        </div>
+
+        <div class="session">
+          <div>
+            <span class="label">Focus length</span>
+            <div class="length-controls">
+              <button class="ghost" data-action="decrease">-</button>
+              <span id="focus-length">25</span>
+              <button class="ghost" data-action="increase">+</button>
+            </div>
+          </div>
+          <div>
+            <span class="label">Break length</span>
+            <div class="length-controls">
+              <button class="ghost" data-action="decrease" data-target="break">-</button>
+              <span id="break-length">5</span>
+              <button class="ghost" data-action="increase" data-target="break">+</button>
+            </div>
+          </div>
+        </div>
+
+        <p class="hint">Stay kind to yourself. Short breaks help you recharge.</p>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
